@@ -1,13 +1,16 @@
-# Configure the AWS Provider
 provider "aws" {
-  region = var.region
-  profile = var.profile
+  region  = "ap-northeast-1"
 }
-resource "aws_instance" "web7" {
-  ami           = "${lookup(var.ami, var.region)}"
-  instance_type = "${lookup(var.instancetype, var.region)}"
+
+
+resource "aws_s3_bucket" "b" {
+  bucket = "mys3honey12345554555"
+  
 
   tags = {
-    Name = "HelloWorld9"
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
+
+  
