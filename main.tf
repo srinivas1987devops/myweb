@@ -8,6 +8,6 @@ resource "aws_instance" "web7" {
   instance_type = "${lookup(var.instancetype, var.region)}"
 
   tags = {
-    Name = "HelloWorld9"
+    Name = "HelloWorld9000"
   }
 }
